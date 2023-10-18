@@ -1,0 +1,39 @@
+﻿<div class="row row-cols-1 row-cols-md-5">
+    @for (int i = 0; i <= Count; i++)
+    {
+        <div class=" col g-2">
+            <div class="bg-secondary p-2 text-center border border-dark-2">
+                @if (i % FizzValue == 0 && i % BuzzValue == 0)
+                {
+                    <span class="text-danger">FizzBuzz</span>
+                }
+                else if (i % FizzValue == 0)
+                {
+                    <span class="text-fizz">Fizz</span>
+                }
+                else if (i % BuzzValue == 0)
+                {
+                    <span class="text-buzz">Buzz</span>
+                }
+                else
+                {
+                    @i
+                }
+            </div>
+
+        </div>
+    }
+
+</div>
+
+@code {
+    //values the component can take
+    [Parameter]
+    public int FizzValue { get; set; }
+
+    [Parameter]
+    public int BuzzValue { get; set; }
+
+    [Parameter]
+    public int Count { get; set; }
+}
