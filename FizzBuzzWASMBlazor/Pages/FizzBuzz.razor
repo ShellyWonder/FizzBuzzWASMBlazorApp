@@ -1,0 +1,25 @@
+﻿@page "/fizzbuzz"
+
+<PageTitle>Fizz Buzz</PageTitle>
+<h3>Can you FizzBuzz?</h3>
+
+<div class="row row-cols-1 row-cols-md-3">
+    
+    <div class="col">
+        <label class="form-label">Fizz Value</label>
+        <input class="form-control" @bind-value="FizzValue" type="number" />
+    </div>
+    <div class="col">
+
+    </div>
+    <div class="col">
+
+    </div>
+</div>
+
+@code {
+    private int FizzValue = 3;
+    private int BuzzValue = 5;
+    private int FizzBuzzValue = 15;
+    private int Count = 100;
+}
