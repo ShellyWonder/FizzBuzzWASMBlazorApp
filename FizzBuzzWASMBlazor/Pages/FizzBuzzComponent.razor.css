@@ -7,3 +7,7 @@
 .text-number {
     color: #ff0000;
 }
+.col>div{
+    border-radius:5px;
+    
+}
